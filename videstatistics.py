@@ -38,3 +38,8 @@ def get_playlist_id():
 if  __name__ =="__main__":   
 
     get_playlist_id()
+    
+    print("get_playlist_id will be executed")
+    
+else:
+    print("get_playlist_id won be executed")    
