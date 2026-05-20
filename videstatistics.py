@@ -1,7 +1,13 @@
 import requests
 import json
 
-API_KEY="AIzaSyDTK_DEEJhruD9EhsASTjPb6P7KOrx6E3Y"
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+API_KEY=os.getenv("API_KEY")
+
 CHANNEL_HANDLE="MrBeast"
 
 def get_playlist_id():
@@ -27,7 +33,7 @@ def get_playlist_id():
 
         channel_playlistid=channel_items["contentDetails"]["relatedPlaylists"]["uploads"]
 
-        #print(channel_playlistid)
+        print(channel_playlistid)
        
         return channel_playlistid
     
@@ -42,4 +48,4 @@ if  __name__ =="__main__":
     print("get_playlist_id will be executed")
     
 else:
-    print("get_playlist_id won be executed")    
+    print("get_playlist_id won be executed")   
