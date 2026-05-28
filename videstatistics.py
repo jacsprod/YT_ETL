@@ -83,7 +83,7 @@ def get_video_ids(playlistid):
         return video_ids    
         
     except requests.exceptions.RequestException as e:
-        raise    
+        print(f"Error:{e}")
 
         
 if  __name__ =="__main__":   
